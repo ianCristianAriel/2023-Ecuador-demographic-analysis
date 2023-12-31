@@ -43,7 +43,7 @@
 
 1. Interest Insights on Ecuador, Segmented by Pichincha, Quito, and Sub-segmented by Current Population (2023) Age 50 Plus
 
-  -Population by Educational Level
+  - Population by Educational Level
   - Population Distribution by Age and Educational Level
   - Population by Area
   - Population by Natural Region
