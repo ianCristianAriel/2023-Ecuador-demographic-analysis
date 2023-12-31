@@ -39,9 +39,9 @@
     └── README.md
 
 
-# Functions
+## Functions
 
-## 1. Interest Insights on Ecuador, Segmented by Pichincha, Quito, and Sub-segmented by Current Population (2023) Age 50 Plus
+1. Interest Insights on Ecuador, Segmented by Pichincha, Quito, and Sub-segmented by Current Population (2023) Age 50 Plus
 
 - **a. Population by Educational Level**
 - **b. Population Distribution by Age and Educational Level**
