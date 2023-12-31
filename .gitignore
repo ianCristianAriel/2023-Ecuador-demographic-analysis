@@ -1,0 +1,14 @@
+./data/ml_best_model/*.pkl
+./data/processed_csv/*.csv
+./data/raw_csv/*.csv
+./data/ml_best_model/__MACOSX
+./pendientes.txt
+./data/processed_csv/2014_census_clean.csv
+./data/processed_csv/2014_census_codec.csv
+./data/processed_csv/2014_census_imputed.csv
+./data/processed_csv/2014_census_scaled.csv
+./data/raw_csv/__MACOSX/._2013__2014_census_data.csv
+./data/raw_csv/__MACOSX/._ecu_elderly_60_plus_2020.csv
+./data/raw_csv/2013__2014_census_data.csv
+./data/raw_csv/ecu_elderly_60_plus_2020.csv
+./data/ml_best_model/__MACOSX/._ultimo_nivel_educativo_rf.pkl
