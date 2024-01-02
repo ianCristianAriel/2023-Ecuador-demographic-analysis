@@ -8,8 +8,10 @@
     ├── data
     │   ├── processed_csv # processed .csv files
     │   └── raw_csv # CSV originales # processed .csv files
+    │   │
     │   ├── ml_best_models # best ml models
     |   |   └── best_model.pkl
+    │   │
     │   ├── images # images used on different stage and files
     |   |   └── approximate_location_of_population_age_60_plus.png
     |   |   └── census_by_age_2010__2022.png
@@ -32,9 +34,9 @@
     |
     ├── .gitignore
     │
-    ├── requirements.txt
+    ├── REQUIREMENTS.txt
     |
-    │-- LISENSE.md
+    │-- LICENSE.md
     |
     └── README.md
 
@@ -68,8 +70,8 @@
 pip3 install -r requirements.txt
 ```
 ## Team
-- [Ian Cristian Ariel Yane](https://github.com/ianCristianAriel): Data Scientist
-- [Jhon Mantilla](https://www.linkedin.com/in/jhon-m-mantilla/): Project Manager
+- [Yane, Ian Cristian](https://github.com/ianCristianAriel): Data Scientist
+- [Mantilla, Jhon](https://www.linkedin.com/in/jhon-m-mantilla/): Project Manager
 
 ## Target Company
 - [CORPORACIÓN GESTIÓN SOSTENIBLE](https://www.linkedin.com/company/corporacion-gestion-sostenible/)
