@@ -25,55 +25,57 @@ The project focuses on analyzing the distribution of the population by sector, a
 
 ## Table of Contents:
 
-- [Portada](#ecuador-demographic-analysis)
-- [Resumen]
-    - [Breve resumen]
-    - [Objetivos del estudio]
+- [Front page](#ecuador-demographic-analysis)
+- [Summary](#summary)
+    - [Brief Project Overview](#brief-project-overview)
+    - [Study objetives](#study-objectives)
 
-- [Introduccion]
-    - [Contextualizacion del problema]
-- [Etapas]
-    - [Limpieza de datos](#limpieza-de-datos)
-        - [Columnas](#columnas)
-        - [Valores nulos](#valores-nulos)
-        - [Tipos de datos](#tipos-de-datos)
-        - [Estandarizacion de los valores texto a minusculas](#estandarizacion-de-los-valores-texto-a-minusculas)
-        - [Guardado del dataframe limpio](#guardado-del-dataframe-limpio)
-    - [Analisis exploratorio de datos]
-        - [Estableciendo parametros stadares de la libreria de graficos]
-        - [Creacion de funciones especiales]
-        - [importacion de csv limpio]
-        - [Anaisis exploratorio]
-        - [Preprocesamiento de datos]
-        - [Guardado de dataframes en csv]
-    - [Machine learning]
-        - [Creacion de funciones especiales]
-        - [Importacion de dataset codificado]
-        - [separacion de datos en features y target]
-        - [Modelos de regresion]
-        - [Modelos de Clasificacion]
-        - [Guardado del mejor modelo en .pkl file]
-    - [Data viz]
-        - [Relacion con otros censos]
-        -[Seteado de parametros para graficos]
-        - [Carga del dataset pre y post imputado]
-        - [Grafico de barras de poblacion por nivel educativo]
-        - [Grafico de boxplot de edades por niveles educativos]
-        - [grafico de barras por genero de personas por nivel educativo]
-        - [Graficos de torta para area]
-        - [Grafico de torta por region natural]
-        - [Graficos de barras por nivel educativo segun años]
-        - [Mapa interactivo con mapa de calor para personas mayres a 60 años  dentro de ecuador pichincha quito en 2020]
-- [Disusion]
-    - [Relación de hallazgos con los objetivos.]
+- [Introduccion](#introduction)
+    - [Contextualization of the problem](#contextualization-of-the-problem)
+- [Stages](#stages)
+    - [Data Cleaning](#data-cleaning)
+        - [Columns](#columns)
+        - [Null values](#null-values)
+        - [Data types](#data-types)
+        - [Standardization of text values to lowercase](#standardization-of-text-values-to-lowercasse)
+        - [Saving the clean DataFrame in .csv file](#saving-the-clean-dataframe-in-csv-file)
+    - [Exploratory data analysis (EDA)](#exploratory-data-analysis-eda)
+        - [Setting standard parameters for plots](#setting-standard-parameters-for-plots)
+        - [Special function creation](#special-functions-creation)
+        - [Importing the clean .csv file into DataFrame](#importing-the-clean-csv-file-into-dataframe)
+        - [Exploratory analysis](#exploratory-analysis)
+        - [Data preprocessing](#data-preprocessing)
+        - [Saving codec and scaled DataFrame into .csv files](#saving-codec-and-scaled-dataframe-into-csv-files)
+    - [Machine learning](#machine-learning)
+        - [Creation of special functions](#creation-of-special-functions)
+        - [Importation of encoded Dataset](#importation-of-encoded-dataset)
+        - [Data separation into features and target](#data-separation-into-features-and-target)
+        - [Regression models](#regression-models)
+        - [Classification models](#classification-models)
+        - [Saving best model into .pfk file](#saving-best-model-into-pfk-file)
+    - [Data visualization](#data-visualization)
+        - [Relationship with other censuses](#relationship-with-other-censuses)
+        - [Setting parameters for charts](#setting-parameters-for-charts)
+        - [Loading before and after imputing .csv file into separate DataFrames](#loading-before-and-after-imputing-csv-file-into-separate-dataframes)
+        - [Bar Chart of Population by Education Level](#bar-chart-of-population-by-education-level)
+        - [Boxplot of Ages by Education Levels](#boxplot-of-ages-by-education-levels)
+        - [Bar Chart by Gender for Education Level](#bar-chart-by-gender-for-education-level)
+        - [Pie Charts for Area](#pie-charts-for-area)
+        - [Pie Charts for natural region](#pie-charts-for-natural-region)
+        - [Bar Charts by Education Level According to Years](#bar-charts-by-education-level-according-to-years)
+        - [Interactive Map with Heatmap for People Aged 65 and Older in Ecuador, Pichincha, Quito (2020)](#interactive-map-with-heatmap-for-people-aged-65-and-older-in-ecuador-pichincha-quito-2020)
+- [Discussion](#discussion)
+    - [Relating findings to objetives](#relating-findings-to-objectives)
 
-- [Conclusiones]
-    - [Resumenes de los resultados mas importantes]
-- [recomendaciones]
-    - [Para futuras investigaciones]
-    - [Aplicaciones de esta invstigacion]
-- [bibliografias]
-- [anexos]
+- [Conclusions](#conclusions)
+    - [Summary of the most important results](#summary-of-the-most-important-results)
+- [Recommendations](#recommendations)
+    - [To future research](#to-future-research)
+    - [To apply of this research](#to-apply-this-research)
+- [Bibliography](#bibliography)
+
+- [Appendices](#appendices)
+
 
 ## Introduction:
 
@@ -101,7 +103,7 @@ I explore the data types present in the columns and observe that certain columns
 #### Standardization of Text Values to Lowercase:
 I select the columns of type 'object' and 'category' to standardize text values, converting them to lowercase.
 
-#### Saving the Clean DataFrame:
+#### Saving the clean DataFrame in .csv file:
 Finally, I save the clean .csv file for further exploratory data analysis.
 
 
@@ -125,7 +127,7 @@ A function has been implemented to impute data by mode, as in the second iterati
 
 Given a sufficient amount of data within one of the target columns, a function has been created to impute data by a Machine Learning model. The function receives the encoded dataframe, the name of the column to impute, the convention for the null value within the encoded dataframe, and the local location of the model to use. Subsequently, it carries out the prediction process using the received parameters.
 
-#### Importing the Clean CSV:
+#### Importing the clean .csv file into DataFrame:
 
 I start by importing the clean .csv file to continue the analysis.
 
@@ -154,7 +156,7 @@ I create a copy of the dataframe, assigning it to the variable 'codec_df'. Then,
 
 After completing the first iteration of the project, I perform the imputation of null values (np.nan). I start by imputing the values in the 'CIUDAD' column using the previously created 'impute_null_values_by_mode' function, which imputes based on the mode of cities within each province group. Subsequently, I impute the null values in the 'ULTIMO_NIVEL_EDUCATIVO' column using the model obtained during the Machine Learning stage, and display the number of missing values before and after imputation.
 
-##### Saving Dataframes to CSV
+##### Saving codec and scaled DataFrame into .csv files:
 I save the encoded, scaled, and imputed (in the second iteration) datasets for later use in the machine learning stage.
 
 
@@ -201,7 +203,7 @@ The Random Forest model showed 1.0 (overfitting) in the 'CIUDAD' column and slig
 
 Finally, implemented the KNN model, which gave 1.0 (overfitting) in the 'CIUDAD' column and a good performance of 0.67 in the 'ULTIMO_NIVEL_EDUCATIVO' column.
 
-#### Saving the Best Model in a .pkl File
+#### Saving best model into .pfk file:
 For the 'CIUDAD' column, some models were discarded due to the limited amount of available data, resulting in either too low accuracy percentages or overfitting. For the 'ULTIMO_NIVEL_EDUCATIVO' column, the Random Forest model was stored as it provided a slightly higher percentage than the decision tree.
 
 
@@ -215,7 +217,7 @@ During the search for the dataset that would provide the most accurate informati
 #### Setting Parameters for Charts:
 I define standard parameters for all my charts, including size, colors for target column variables, font color, among others.
 
-#### Loading Pre and Post-Imputed Dataset:
+#### Loading before and after imputing .csv file into separate DataFrames:
 I load the dataset before imputation to observe the values prior to the imputation of values in the second iteration over age and the dataset that does have imputed values. Then, I filter each one for the target audience in terms of province (Pichincha), city (Quito), and age (individuals who, at present (2023), would be 50 years or older).
 
 
@@ -305,6 +307,8 @@ Note: As the entire area is urban, no further analysis related to the area will 
 No added new information after imputing null values in the column.
 This analysis indicates that both before and after imputation, the entirety of the area is classified as urban.
 
+#### Pie Charts for natural region:
+
 #### Bar Charts by Education Level According to Years:
 **Before Imputation:**
 
@@ -381,10 +385,10 @@ The population aged 60 and above is distributed along the principal streets in t
 - Mainly pronounced on males.
 
 ## Recommendations:
-### For Future Research
+### To future research:
 The dataset used in this analysis adequately addressed all posed questions. For future research, it is suggested to consider the use of updated census datasets. If multiple datasets are needed to gather the necessary information, following appropriate inference steps, similar to those performed in this analysis by adjusting census data to the current date and supporting it with statistical and official sources, is crucial.
 
-### Applications of This Investigation
+### To apply this research:
 It is recommended to review this report in detail to understand the context, result accuracy, and the potential for scaling or reprofiling the analysis to other locations in Ecuador. Additionally, updating the analysis with new data based on evolving demographic trends is advisable.
 
 ## Bibliography:
