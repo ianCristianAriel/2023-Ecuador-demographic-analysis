@@ -1,6 +1,6 @@
 
 
-# Ecuador demographic analysis
+# __Ecuador demographic analysis__
 
 -   **Data scientist:** [Yané, Ian Cristian Ariel](https://github.com/ianCristianAriel)
 - **Project manager:** [Mantilla, Jhon](https://www.linkedin.com/in/jhon-m-mantilla/)
@@ -9,12 +9,12 @@
     - **Initial date:** 08 / 23 / 2024
     - **Finish date:** 01 / 23 / 2024
 
-## Summary:
+## __Summary:__
 
-### Brief Project Overview:
+### __Brief Project Overview:__
 The project focuses on analyzing the distribution of the population by sector, age, and educational level with the aim of identifying sectors with a population over 50 years old in the province of Pichincha, specifically in the city of Quito. This information is crucial for future volunteer projects with an educational focus.
 
-### Study Objectives:
+### __Study Objectives:__
 - Population by Educational Level
 - Population Distribution by Age and Educational Level
 - Population by Area
@@ -23,7 +23,7 @@ The project focuses on analyzing the distribution of the population by sector, a
 - Education Trends Between 2013 and 2014
 - Population Age 60 Plus by approximately geographic Location
 
-## Table of Contents:
+## __Table of Contents:__
 
 - [Front page](#ecuador-demographic-analysis)
 - [Summary](#summary)
@@ -77,43 +77,43 @@ The project focuses on analyzing the distribution of the population by sector, a
 - [Appendices](#appendices)
 
 
-## Introduction:
+## __Introduction:__
 
-### Contextualization of the Problem:
+### __Contextualization of the Problem:__
 In the context of a high proportion of older people experiencing loneliness and seeking companionship, especially those with education levels above the average (non-university higher education or tertiary education, university education, and postgraduate studies), and in contrast, the presence of numerous young individuals and people in general with a strong desire to learn but lacking the financial resources to afford education, the initiative of [SUSTAINABLE MANAGEMENT CORPORATION](https://ec.linkedin.com/company/corporacion-gestion-sostenible) arises. The proposal involves conducting an analysis to identify the necessary information for future volunteer projects, connecting older individuals willing to participate voluntarily with those seeking to acquire new skills.
 
-## Stages:
+## __Stages:__
 In this data science study, Python 3.x will be used. After importing the necessary libraries, each stage follows the steps outlined below.
 
 
-### Data Cleaning:
-#### Columns:
+### __Data Cleaning:__
+#### __Columns:__
 For this stage, I begin by decompressing and reading the .csv file with raw census information. After a review, unnecessary columns for the analysis, such as 'MONTO_VIVIENDA_MENSUAL', 'ZONA', and 'POSICION_OCUPACIONAL', were identified and removed.
 
 Adjustments were made to column names for clarity and conciseness. For example, 'IDENTIF_SECT' was converted to 'ID_SECTOR', 'Ciudad Autorepresentada' was simplified to 'CIUDAD', 'Provincia' to 'PROVINCIA', and so on. This normalization facilitates data analysis and understanding.
 
 Finally, the columns were rearranged hierarchically to improve the structure of the dataset. The new arrangement is as follows: 'ID_SECTOR', 'AREA_2000', 'PROVINCIA', 'ZONA_PLANIFICACION', 'REGION_NATURAL', 'SEXO', 'EDAD', 'ULTIMO_NIVEL_EDUCATIVO', 'GRADO_CURSO', 'ANIOS_TRABAJO', 'MES', 'ANIO', 'CIUDAD'.
 
-#### Null Values:
+#### __Null Values:__
 First, I replace null values, commonly represented as 'NaN', 'faltante', '-', among others within the datasets, with np.nan, the way the Pandas library interprets null values. Then, I use matrix and bar visualizations to assess the quantity and distribution of null values per column.
 
-#### Data Types:
+#### __Data Types:__
 I explore the data types present in the columns and observe that certain columns, such as 'AREA_2000', 'CIUDAD', 'PROVINCIA', 'REGION_NATURAL', 'SEXO', and 'ULTIMO_NIVEL_EDUCATIVO', contain categories. Therefore, I convert them to the 'category' data type for more efficient representation. Subsequently, I split the 'PERIODO' column into 'MES' and 'ANIO', converting them into integer columns along with the columns 'ZONA_PLANIFICACION', 'EDAD', 'GRADO_CURSO', and 'ANIOS_TRABAJO'.
 
-#### Standardization of Text Values to Lowercase:
+#### __Standardization of Text Values to Lowercase:__
 I select the columns of type 'object' and 'category' to standardize text values, converting them to lowercase.
 
-#### Saving the clean DataFrame in .csv file:
+#### __Saving the clean DataFrame in .csv file:__
 Finally, I save the clean .csv file for further exploratory data analysis.
 
 
 
-### Exploratory Data Analysis (EDA):
+### __Exploratory Data Analysis (EDA):__
 
-#### Setting Standard Parameters for Plots:
+#### __Setting Standard Parameters for Plots:__
 I define the necessary parameters for the plots, ensuring visual consistency in all graphical representations.
 
-#### Special Functions Creation:
+#### __Special Functions Creation:__
 
 **Encoding and Decoding Function:**
 
@@ -127,12 +127,12 @@ A function has been implemented to impute data by mode, as in the second iterati
 
 Given a sufficient amount of data within one of the target columns, a function has been created to impute data by a Machine Learning model. The function receives the encoded dataframe, the name of the column to impute, the convention for the null value within the encoded dataframe, and the local location of the model to use. Subsequently, it carries out the prediction process using the received parameters.
 
-#### Importing the clean .csv file into DataFrame:
+#### __Importing the clean .csv file into DataFrame:__
 
 I start by importing the clean .csv file to continue the analysis.
 
 
-#### Exploratory Analysis
+#### __Exploratory Analysis:__
 
 **Creation of Filtered DataFrame:**
 
@@ -146,7 +146,7 @@ I use the Seaborn library to explore relationships between all columns through a
 
 I calculate a correlation matrix that shows the strength of the relationship between columns using the Pearson method. Subsequently, I identify those column pairs with correlations greater than +/- 70% and display them in a bar chart.
 
-#### Data Preprocessing:
+#### __Data Preprocessing:__
 
 **Encoding and Scaling:**
 
@@ -156,12 +156,12 @@ I create a copy of the dataframe, assigning it to the variable 'codec_df'. Then,
 
 After completing the first iteration of the project, I perform the imputation of null values (np.nan). I start by imputing the values in the 'CIUDAD' column using the previously created 'impute_null_values_by_mode' function, which imputes based on the mode of cities within each province group. Subsequently, I impute the null values in the 'ULTIMO_NIVEL_EDUCATIVO' column using the model obtained during the Machine Learning stage, and display the number of missing values before and after imputation.
 
-##### Saving codec and scaled DataFrame into .csv files:
+##### __Saving codec and scaled DataFrame into .csv files:__
 I save the encoded, scaled, and imputed (in the second iteration) datasets for later use in the machine learning stage.
 
 
-### Machine Learning:
-#### Creation of Special Functions
+### __Machine Learning:__
+#### **Creation of Special Functions:**
 
 **grid_search_function:**
 
@@ -175,17 +175,17 @@ Trains the model with the previously calculated best parameters. Receives the mo
 
 Performs tests on the model and delivers accuracy.
 
-#### Importation of Encoded Dataset
+#### **Importation of Encoded Dataset:**
 I import the dataset previously encoded in the EDA stage and filter it to remove records with missing values in the columns of interest ('CIUDAD' and 'ULTIMO_NIVEL_EDUCATIVO').
 
-#### Data Separation into Features and Target
+#### **Data Separation into Features and Target:**
 I separate the dataset into features (X) and the target column (y), with 'CIUDAD' in the first case and 'ULTIMO_NIVEL_EDUCATIVO' in the second. Then, I perform a split into training and test sets (X_train, y_train, X_test, and y_test).
 
-#### Regression Models
-Two regression models, linear and logistic, were evaluated in both columns of interest ('CIUDAD' and 'ULTIMO_NIVEL_EDUCATIVO'). Both models did not provide optimal results and were discarded.
+#### **Regression Models:**
+Two **regression models, linear and logistic**, were evaluated in both columns of interest ('CIUDAD' and 'ULTIMO_NIVEL_EDUCATIVO'). Both models did not provide optimal results and were discarded.
 
 
-### Classification Models:
+#### **Classification Models:**
 
 **Support Vector Machine (SVM):**
 
@@ -203,26 +203,25 @@ The Random Forest model showed 1.0 (overfitting) in the 'CIUDAD' column and slig
 
 Finally, implemented the KNN model, which gave 1.0 (overfitting) in the 'CIUDAD' column and a good performance of 0.67 in the 'ULTIMO_NIVEL_EDUCATIVO' column.
 
-#### Saving best model into .pfk file:
+#### **Saving best model into .pfk file:**
 For the 'CIUDAD' column, some models were discarded due to the limited amount of available data, resulting in either too low accuracy percentages or overfitting. For the 'ULTIMO_NIVEL_EDUCATIVO' column, the Random Forest model was stored as it provided a slightly higher percentage than the decision tree.
 
 
-### Data Visualization:
+### __Data Visualization:__
 
-#### Relationship with Other Censuses:
+#### **Relationship with Other Censuses:**
 Below are two graphs illustrating the relationship between the 2010, 2014, and 2022 censuses in Ecuador. The first depicts the age distribution of the population in different censuses, while the second shows the percentage change in population by age between the censuses.
 
 During the search for the dataset that would provide the most accurate information for the target objective, datasets from Ecuador's censuses in 2010, 2014, and 2022 were found. The decision was made to use the 2014 dataset because it required fewer inferences, providing values for the last educational level, ages, and country, province, and city of the individuals. Additionally, the comparison with the 2022 census showed that the distribution of people by gender and age between the 2010 and 2022 censuses remained very similar, with barely perceptible variations.
 
-#### Setting Parameters for Charts:
+#### **Setting Parameters for Charts:**
 I define standard parameters for all my charts, including size, colors for target column variables, font color, among others.
 
-#### Loading before and after imputing .csv file into separate DataFrames:
+#### **Loading before and after imputing .csv file into separate DataFrames:**
 I load the dataset before imputation to observe the values prior to the imputation of values in the second iteration over age and the dataset that does have imputed values. Then, I filter each one for the target audience in terms of province (Pichincha), city (Quito), and age (individuals who, at present (2023), would be 50 years or older).
 
 
-#### Bar Chart of Population by Education Level
-
+#### **Bar Chart of Population by Education Level:**
 
 <div style="text-align: center;">
     <img src="./data/images/barplot_by_education_level.png  " width="1000" height="1000">
@@ -246,7 +245,12 @@ The main education levels in the analysis are:
 
 This analysis provides a clear view of the population distribution based on their educational level before and after data imputation. There is a shift in the frequency of records in each education level after imputation, which may influence future decisions or actions related to demographic analysis.
 
-#### Boxplot of Ages by Education Levels:
+#### **Boxplot of Ages by Education Levels:**
+
+<div style="text-align: center;">
+    <img src="./data/images/boxplot_education_level_by_age.png" width="1000" height="1000">
+</div>
+
 **Before Imputation Conclusion:**
 
 - The age range for individuals with no formal education spans between 53 and 76 years.
@@ -283,48 +287,81 @@ This analysis provides a clear view of the population distribution based on thei
 
 - Individuals pursuing postgraduate education tend to be between 45 and 61 years old.
 
-#### Bar Chart by Gender for Education Level
+#### **Bar Chart by Gender for Education Level:**
+
+<div style="text-align: center;">
+    <img src="./data/images/barplot_education_level_by_gender.png" width="1000" height="1000">
+</div>
+
+
 **Before Imputation Conclusion:**
 
-In general, it is observed that females tend to have their highest academic attainment in categories such as none, primary, higher, and secondary education compared to males.
+- In general, it is observed that females tend to have their highest academic attainment in categories such as none, primary, higher, and secondary education compared to males.
 
-Conversely, males exhibit a higher prevalence in the advanced education degrees, for example, postgraduate and higher education categories.
+- Conversely, males exhibit a higher prevalence in the advanced education degrees, for example, postgraduate and higher education categories.
 
 **After Imputation Conclusion:**
 
-The same differences remain as before, indicating consistency in gender-based educational disparities.
+- The same differences remain as before, indicating consistency in gender-based educational disparities.
 
 
-#### Pie Charts for Area:
+#### **Pie Charts for Area:**
+
+<div style="text-align: center;">
+    <img src="./data/images/pieplot_area_by_city.png" width="1000" height="1000">
+</div>
+
 **Before Imputation:**
 
-The data reveals that the area is 100% urban.
+- The data reveals that the area is 100% urban.
 
 Note: As the entire area is urban, no further analysis related to the area will be derived.
 
 **After Imputation:**
 
-No added new information after imputing null values in the column.
+- No added new information after imputing null values in the column.
 This analysis indicates that both before and after imputation, the entirety of the area is classified as urban.
 
-#### Pie Charts for natural region:
+#### **Pie Charts for natural region:**
 
-#### Bar Charts by Education Level According to Years:
+<div style="text-align: center;">
+    <img src="./data/images/pieplot_natural_region_by_city.png" width="1000" height="1000">
+</div>
+
+**Before imputation:**
+- The data indicates that the natural region is **100% Sierra**.
+
+**Note:** As the entire region is Sierra, no further analysis related to the natural region will be derived.
+
+**After imputation:**
+- no added new information later imputation null values in column
+
+#### **Bar Charts by Education Level According to Years:**
+
+<div style="text-align: center;">
+    <img src="./data/images/barplot_education_level_by_census_years.png" width="1000" height="1000">
+</div>
+
 **Before Imputation:**
 
-The analysis reveals that in categories such as literacy, no formal education, non-university higher education, and primary, there is a mild increase in the number of records in the year 2013.
+- The analysis reveals that in categories such as literacy, no formal education, non-university higher education, and primary, there is a mild increase in the number of records in the year 2013.
 
-Interestingly, in 2014, there is a subtle increase in the index for remaining categories like secondary, higher education, and postgraduate education.
+- Interestingly, in 2014, there is a subtle increase in the index for remaining categories like secondary, higher education, and postgraduate education.
 
 Note: This indicates variations in educational distribution between slightly different categories between the years 2013 and 2014.
 
 **After Imputation:**
-The overall observations remain consistent before imputation, except for the Non-university Higher Education category, which shows a slight increase in the year 2014 in this case.
+- The overall observations remain consistent before imputation, except for the Non-university Higher Education category, which shows a slight increase in the year 2014 in this case.
 
-This analysis highlights mild changes in educational distribution between the years 2013 and 2014, which could be of interest when planning educational strategies or assessing trends over time.
+- This analysis highlights mild changes in educational distribution between the years 2013 and 2014, which could be of interest when planning educational strategies or assessing trends over time.
 
 
-### Interactive Map with Heatmap for People Aged 65 and Older in Ecuador, Pichincha, Quito (2020):
+### __Interactive Map with Heatmap for People Aged 65 and Older in Ecuador, Pichincha, Quito (2020):__
+
+<div style="text-align: center;">
+    <img src="./data/images/approximate_location_of_population_age_60_plus.png" width="1000" height="1000">
+</div>
+
 The population aged 60 and above is distributed along the main streets in the following areas:
 
 **Lengthwise Distribution:**
@@ -346,12 +383,12 @@ The population aged 60 and above is distributed along the main streets in the fo
 
 This map provides an effective visualization of the concentration of the population aged 65 and older in specific areas of Ecuador, Pichincha, Quito during the year 2020. Geospatial information can be valuable for planning services and resources targeted at the elderly population in those locations.
 
-## Discussion:
-### Relating Findings to Objectives
+## __Discussion:__
+### __Relating Findings to Objectives:__
 The specific results of the analysis, such as the location, gender, and types of educational levels of the target audience, were observed.
 
-## Conclusions:
-### Summary of the Most Important Results
+## __Conclusions:__
+### __Summary of the Most Important Results:__
 In this analysis, data from the 2013-2014 census was used as it was the richest dataset to obtain information about the educational level of the population. Additionally, after investigating population variability until the latest census in 2022, a similar population distribution by age is observed, as detailed in the census report provided by www.censoecuador.gob.ec (pages 29 to 31).
 
 The population aged 60 and above is distributed along the principal streets in the following areas:
@@ -384,15 +421,15 @@ The population aged 60 and above is distributed along the principal streets in t
 - Age range: 45 to 61 years.
 - Mainly pronounced on males.
 
-## Recommendations:
-### To future research:
+## __Recommendations:__
+### __To future research:__
 The dataset used in this analysis adequately addressed all posed questions. For future research, it is suggested to consider the use of updated census datasets. If multiple datasets are needed to gather the necessary information, following appropriate inference steps, similar to those performed in this analysis by adjusting census data to the current date and supporting it with statistical and official sources, is crucial.
 
-### To apply this research:
+### __To apply this research:__
 It is recommended to review this report in detail to understand the context, result accuracy, and the potential for scaling or reprofiling the analysis to other locations in Ecuador. Additionally, updating the analysis with new data based on evolving demographic trends is advisable.
 
-## Bibliography:
-### List of All Cited Sources in the Report
+## __Bibliography:__
+### __List of All Cited Sources in the Report:__
 - [Encuesta de Condiciones de Vida - ECV](https://www.datosabiertos.gob.ec/dataset/encuesta-condiciones-vida-2014)
 
 - [Población de 65 años de edad y más (% del total)](https://datos.bancomundial.org/indicador/SP.POP.65UP.TO.ZS)
@@ -403,8 +440,8 @@ It is recommended to review this report in detail to understand the context, res
 
 - [Ecuador - Subnational Demographic and Health Data](https://data.humdata.org/dataset/dhs-subnational-data-for-ecuador)
 
-## Appendices:
-### Additional Details
+## __Appendices:__
+### __Additional Details:__
 
 - [Clean data stage](./notebooks/1_data_clean.ipynb)
 - [Exploratory data analisis stage](./notebooks/2_eda_enrichment_and_preprosesing.ipynb)
