@@ -1,5 +1,5 @@
 ## Project status
-- **In Progress**
+- **Finished**
 
 ## File structure
 
@@ -54,24 +54,27 @@
     - Population Age 60 Plus by approximately geographic Location
 
 ## Packages used
-- Python
-  - numpy
-  - pandas
-  - seaborn
-  - matplotlib
-  - scikit-learn
-  - joblib
-  - scipy
-  - missingno
-  - folium
+- **Programing language:**
+  - **Python**
+    - *Libraries from data analysis:*
+      - *numpy*
+      - *pandas*
+      - *missingno*
+
+    - *Libraries from data visualization:*
+      - *matplotlib*
+      - *seaborn*
+      - *folium*
+
+    - *Libraries from machine learning:*
+      - *scikit-learn*
+      - *joblib*
 
 ### Package installation
 ```bash
 pip3 install -r requirements.txt
 ```
 ## Team
-- [Yane, Ian Cristian](https://github.com/ianCristianAriel): Data Scientist
-- [Mantilla, Jhon](https://www.linkedin.com/in/jhon-m-mantilla/): Project Manager
-
-## Target Company
-- [CORPORACIÓN GESTIÓN SOSTENIBLE](https://www.linkedin.com/company/corporacion-gestion-sostenible/)
+- Data Scientist: [Yane, Ian Cristian](https://github.com/ianCristianAriel)
+- Project Manager: [Mantilla, Jhon](https://www.linkedin.com/in/jhon-m-mantilla/)
+- Target company: [CORPORACIÓN GESTIÓN SOSTENIBLE](https://www.linkedin.com/company/corporacion-gestion-sostenible/)

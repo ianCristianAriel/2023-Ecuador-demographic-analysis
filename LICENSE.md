@@ -1,7 +1,7 @@
 # Project License for Corporación Gestión Sostenible
 
 ## Reserved Credits:
-- This project was made possible thanks to Chat-GPT in its version 3.5. We extend our gratitude to OpenAI for providing this exceptional tool.
+- This project was made possible thanks to ChatGPT in its version 3.5. We extend our gratitude to OpenAI for providing this exceptional tool.
 
 ## Licenses and Rights Reserved:
 - [Sustainable Management Corporation](https://www.linkedin.com/company/corporacion-gestion-sostenible/) -> CC BY-NC-SA 4.0
