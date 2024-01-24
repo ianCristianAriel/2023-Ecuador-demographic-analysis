@@ -4,7 +4,7 @@
 - This project was made possible thanks to ChatGPT in its version 3.5. We extend our gratitude to OpenAI for providing this exceptional tool.
 
 ## Licenses and Rights Reserved:
-- [Sustainable Management Corporation](https://www.linkedin.com/company/corporacion-gestion-sostenible/) -> CC BY-NC-SA 4.0
+- [CORPORACIÓN GESTIÓN SOSTENIBLE](https://www.linkedin.com/company/corporacion-gestion-sostenible/) -> CC BY-NC-SA 4.0
 
 ### Used Data Sources and Licenses:
 1. [Ecuador - Subnational Demographic and Health Data](https://data.humdata.org/dataset/dhs-subnational-data-for-ecuador) -> License: CC BY-ND 4.0
@@ -15,4 +15,4 @@
 
 ---
 
-This project is protected by a license that prohibits its use for commercial purposes. If you intend to use it for non-commercial purposes, please contact us in advance, mention the repository author, and acknowledge the company - [Corporación Gestión Sostenible](https://www.linkedin.com/company/corporacion-gestion-sostenible/). Also, incorporate the content of this `LICENSE.md`.
+This project is protected by a license that prohibits its use for commercial purposes. If you intend to use it for non-commercial purposes, please contact us in advance, mention the repository author, and acknowledge the company - [CORPORACIÓN GESTIÓN SOSTENIBLE](https://www.linkedin.com/company/corporacion-gestion-sostenible/). Also, incorporate the content of this `LICENSE.md`.
