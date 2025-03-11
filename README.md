@@ -79,6 +79,6 @@
 pip3 install -r requirements.txt
 ```
 ## Team
-- Data Scientist and project manager: [Yane, Ian Cristian](https://github.com/ianCristianAriel)
+- Data Scientist: [Yane, Ian Cristian](https://github.com/ianCristianAriel)
 - Target company: [CORPORACIÓN GESTIÓN SOSTENIBLE](https://www.linkedin.com/company/corporacion-gestion-sostenible/)
 - Director of target company: [Mantilla, Jhon](https://www.linkedin.com/in/jhon-m-mantilla/)
